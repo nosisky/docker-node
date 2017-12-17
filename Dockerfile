@@ -1,31 +1,25 @@
 
-# Build: docker build -t nosisky/node .
-
-# Option 1
-# Start MongoDB and Node (link Node to MongoDB container with legacy linking)
- 
-# docker run -d --name my-mongodb mongo
-# docker run -d -p 3000:3000 --link my-mongodb:mongodb --name nodeapp nosisky/node
-
-# Option 2: Create a custom bridge network and add containers into it
-
-# docker network create --driver bridge isolated_network
-# docker run -d --net=isolated_network --name mongodb mongo
-# docker run -d --net=isolated_network --name nodeapp -p 3000:3000 nosisky/node
-
-
+# Get the latest node image from dockerhub
 FROM node:latest
+
+# Create a folder where we store application data
+RUN mkdir -p /src/docker-node
 
 MAINTAINER Abdulrasaq Nasirudeen
 
-ENV NODE_ENV=development
+# Copy package.json file to the new directory
+COPY package.json /src/docker-node
+
+# Set application port to 3000
 ENV PORT=3000
 
-COPY . /var/www
-WORKDIR /var/www
+# Copy all source code in working directory to the new directory
+COPY . /src/docker-node
 
-RUN npm i
+# Set application directory to the newly created directory
+WORKDIR /src/docker-node
 
+##Expose application to environment port
 EXPOSE $PORT
 
 ENTRYPOINT ["npm", "start"]

@@ -8,16 +8,13 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
-    networks:
-      - nodeapp-network
-    depends_on: 
+    links: 
       - mongodb
-      
   mongodb:
-    image: mongo
-    networks:
-      - nodeapp-network
-
-networks:
-  nodeapp-network:
-    driver: bridge
+    container_name: mongo
+    build: ./mongo
+    env_file: .env
+    volumes:
+      - ./mongo/data:/data/db
+    ports:
+      - "27017:27017"

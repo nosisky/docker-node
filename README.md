@@ -23,9 +23,12 @@ Sample application showing how mongodb and docker can be run in Docker container
 #### Environment variables
 A few things to note about environment varibales.
 
-ENV | Note
+ENV | Default | Note
 --- | -------
-`DB_URL` | Database URL Where data will be stored and retrieved
+`DB_URL` | mongodb://localhost:27017/dockerNode | Database URL Where data will be stored and retrieved
+`MONGODB_ADMIN_USERNAME` and `MONGODB_ADMIN_PASSWORD`| `root` and `root` respectively | Database authentication details
+`MONGODB_APP_USERNAME` and `MONGODB_APP_PASSWORD`| `dockernode` and `root` respectively |  Used for setting the credentials for the application database |
+`MONGODB_APP_DB` | dockerNode | Application Database name |
 
 ### API Documentation
 The API only has one endpoint which is the `/users` endpoint for saving users to the database. The endpoint works with the HTTP verbs: `POST`, `GET`, `PUT`, `DELETE`.
