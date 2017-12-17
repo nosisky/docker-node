@@ -10,9 +10,7 @@ Sample application showing how mongodb and docker can be run in Docker container
 
 3. Open a command prompt at the root of the application's folder.
 
-4. Run `docker-compose build`
-
-5. Run `docker-compose up`
+4. Run `docker-compose up`
 
 6. Navigate to http://localhost:3000 (http://192.168.99.100:3000 if using Docker Toolbox) with any app to interact with the API. This assumes that's the IP assigned to VirtualBox - change if needed.
 
