@@ -2,7 +2,7 @@
 
 Sample application showing how mongodb and docker can be run in Docker containers
 
-###Starting the Application with Docker Compose
+### Starting the Application with Docker Compose
 
 1. Install Docker for Windows or Docker for Mac (If you're on Windows 7 install Docker Toolbox: http://docker.com/toolbox).
 
@@ -23,4 +23,4 @@ Sample application showing how mongodb and docker can be run in Docker container
 
 ## Author
 
-# Abdulrasaq Nasirudeen
+### Abdulrasaq Nasirudeen (Dealwap)
