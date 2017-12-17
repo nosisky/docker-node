@@ -10,6 +10,9 @@ MAINTAINER Abdulrasaq Nasirudeen
 # Copy package.json file to the new directory
 COPY package.json /src/docker-node
 
+# Install dependencies
+RUN npm install
+
 # Set application port to 3000
 ENV PORT=3000
 
