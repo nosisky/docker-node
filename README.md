@@ -117,4 +117,4 @@ password: janedoe
 **Olajide Bolaji 'Nuel** - Software Developer at Andela
 
 ### Docker implemented by
-- [**Temitayo Fadojutimi**](http://twitter.com/dealwap)
+- [**Abdurasaq Nasirudeen**](http://twitter.com/dealwap)
