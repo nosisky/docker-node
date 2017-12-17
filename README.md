@@ -24,7 +24,7 @@ Sample application showing how mongodb and docker can be run in Docker container
 A few things to note about environment varibales.
 
 ENV | Note
---- | ------- | -----------------
+--- | -------
 `DB_URL` | Database URL Where data will be stored and retrieved
 
 ### API Documentation
