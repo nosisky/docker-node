@@ -19,7 +19,7 @@ A few things to note about environment varibales.
 
 ENV | Default | Note
 --- | ------- | -----------------
-`DB_URL` | mongodb://localhost:27017/dockerNode | Database URL Where data will be stored and retrieved
+`DB_URL` | mongodb://dockernode:password@mongo:27017/dockerNode | Database URL Where data will be stored and retrieved
 `MONGODB_ADMIN_USERNAME` and `MONGODB_ADMIN_PASSWORD`| `root` and `root` respectively | Database authentication details
 `MONGODB_APP_USERNAME` and `MONGODB_APP_PASSWORD`| `dockernode` and `root` respectively |  Used for setting the credentials for the application database |
 `MONGODB_APP_DB` | dockerNode | Application Database name |
