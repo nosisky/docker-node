@@ -13,9 +13,6 @@
 # docker run -d --net=isolated_network --name mongodb mongo
 # docker run -d --net=isolated_network --name nodeapp -p 3000:3000 nosisky/node
 
-# Seed the database with sample database
-
-# Run: docker exec nodeapp node dbSeeder.js
 
 FROM node:latest
 
